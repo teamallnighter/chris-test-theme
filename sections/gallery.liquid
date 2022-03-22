@@ -5,7 +5,7 @@
     <div class="gallery__inner-container">
     {% for block in section.blocks %}
         <div class="gallery__image-container">
-            <img src="{{ block.settings.image | image_url: 'master' }}">
+            <img src="{{ block.settings.image | image_url: 'master' }}" loading="lazy">
         </div>
     {% endfor %}
     </div>
@@ -42,6 +42,12 @@
           "info": "800 X 800 recommended"
         }
       ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Gallery Images",
+      "category": "Image"
     }
   ]
 }
